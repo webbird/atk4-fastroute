@@ -1,0 +1,9 @@
+composer.phar
+/composer.lock
+/.idea
+/vendor
+.DS_Store
+.php_cs.cache
+/build
+/docs
+routes.cache

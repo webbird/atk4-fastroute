@@ -32,13 +32,13 @@ if (!class_exists(ATKView::class)) {
 
             /** @var Loader $loader */
             $loader = \atk4\ui\Loader::addTo($this->app);
-            $loader->set(function ($l) use ($loader): void {
+            $loader->set(function ($l): void {
                 $number = rand(1, 100);
                 $l->add(['Text', 'random :'.$number]);
             });
 
             /** @var Button $button */
-            $button = \atk4\ui\Button::addTo($this->app,['test']);
+            $button = \atk4\ui\Button::addTo($this->app, ['test']);
             $button->on('click', function ($j) use ($loader) {
                 return $loader->jsReload();
             });
